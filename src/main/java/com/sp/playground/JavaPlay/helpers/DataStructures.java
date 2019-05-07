@@ -1,6 +1,7 @@
 package com.sp.playground.JavaPlay.helpers;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class DataStructures {
     public void DatatypeConversion(){
@@ -16,6 +17,22 @@ public class DataStructures {
         // Fill array with 0's
         Arrays.fill(maxArr, 0);
 
+        // Convert array to List of Integer
+        int[] ints = {1, 2, 3};
+        List<Integer> intList = new ArrayList<Integer>();
+        for (int i : ints)
+        {
+            intList.add(i);
+        }
+        // java 8 : functional way
+        List<Integer> list = Arrays.stream(ints)		// IntStream
+                .boxed() 		// Stream<Integer>
+                .collect(Collectors.toList());
+
+        // Sorting
+        Arrays.sort(maxArr); // Sorting array of primitive type
+        // Sorting Objects, using comparator
+//        Arrays.sort(T[]a , Comparator<T> b);
     }
 
     public void helpList(){
@@ -24,7 +41,7 @@ public class DataStructures {
         // Initializing List
         List<String> initializedList = Arrays.asList("one", "two", "three");
         // Only in JDK 9
-        List<String> initializedList2 = List.of("one", "two", "three");
+//        List<String> initializedList2 = List.of("one", "two", "three");
 
         // Iterate list
         for(String item : initializedList){
@@ -48,7 +65,12 @@ public class DataStructures {
         map.put("Steve", 2);
         map.put("James", 3);
 
-        // Iterate
+        // Iterate, if needed to modify external variable
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + "/" + entry.getValue());
+        }
+
+        // Iterate functional way, but cannot modify external variables
         map.
                 forEach((key, value) -> System.out.println(key + " " + value));
         map.entrySet().
@@ -62,6 +84,11 @@ public class DataStructures {
 
         // Increment map value
         map.merge("test",1, Integer::sum);
+    }
+
+    public void mathFunctions(){
+        // Math round off, ceil etc
+        // Cast data types
     }
 
 	public static void main(String[] args){
