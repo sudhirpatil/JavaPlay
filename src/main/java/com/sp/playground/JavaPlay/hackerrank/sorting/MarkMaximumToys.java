@@ -1,14 +1,9 @@
-package com.sp.playground.JavaPlay.hackerrank.strings;
+package com.sp.playground.JavaPlay.hackerrank.sorting;
 
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
 
-public class MarkToy {
+public class MarkMaximumToys {
 
         // Complete the maximumToys function below.
         static int maximumToys(int[] prices, int k) {

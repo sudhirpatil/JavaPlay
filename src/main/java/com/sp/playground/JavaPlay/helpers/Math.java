@@ -8,4 +8,10 @@ public class Math {
 
 
     }
+
+    public void mathFunctions(){
+        // Math round off, ceil etc
+        // Cast data types
+
+    }
 }

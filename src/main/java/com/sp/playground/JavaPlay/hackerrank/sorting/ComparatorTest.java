@@ -1,4 +1,4 @@
-package com.sp.playground.JavaPlay.hackerrank.strings;
+package com.sp.playground.JavaPlay.hackerrank.sorting;
 
 import java.util.*;
 
