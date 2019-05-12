@@ -6,7 +6,7 @@ import java.util.*;
 import static java.util.stream.Collectors.joining;
 
 
-class Result {
+class Result2 {
 
     /*
      * Complete the 'getMaxOccurrences' function below.
@@ -93,7 +93,7 @@ public class MaxSubstring {
 
         int maxUnique = Integer.parseInt(bufferedReader.readLine().trim());
 
-        int result = Result.getMaxOccurrences(s, minLength, maxLength, maxUnique);
+        int result = Result2.getMaxOccurrences(s, minLength, maxLength, maxUnique);
         System.out.println(result);
 //        bufferedWriter.write(String.valueOf(result));
 //        bufferedWriter.newLine();
