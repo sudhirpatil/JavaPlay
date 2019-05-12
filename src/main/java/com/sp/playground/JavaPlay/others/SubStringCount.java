@@ -1,4 +1,4 @@
-package com.sp.playground.JavaPlay.hackerrank.others;
+package com.sp.playground.JavaPlay.others;
 
 import java.util.Arrays;
 
