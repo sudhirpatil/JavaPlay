@@ -21,6 +21,10 @@ public class PrintSubArray {
         /* Number of subsequences is (2**n -1)*/
         int opsize = (int)Math.pow(2, arr.length);
 
+        /**
+         * e.g for 3 elements, 9 sub arrays possible. If we consider bits set with 1 from 0 to 9, will give all combinations of subarray
+         * bit on which 1 is set, can be considered as index on array and number on those indexes can be used to form subarray.
+         */
         for(int counter=1 ;counter<opsize;counter++){
             for(int j=0; j< arr.length; j++){
                 if(BigInteger.valueOf(counter).testBit(j))
