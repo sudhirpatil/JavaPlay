@@ -1,4 +1,4 @@
-package com.sp.playground.JavaPlay.others;
+package com.sp.playground.JavaPlay.test;
 
 import java.io.*;
 import java.util.*;

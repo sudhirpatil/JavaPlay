@@ -2,9 +2,9 @@ package com.sp.playground.JavaPlay.others;
 
 // A Java program to find the count of distinct substring
 // of a string using trie data structure
-public class Suffix
+public class SuffixTreeDistinctSubstring
 {
-    // A Suffix Trie (A Trie of all suffixes) Node
+    // A SuffixTreeDistinctSubstring Trie (A Trie of all suffixes) Node
     static class SuffixTrieNode
     {
         static final int MAX_CHAR = 26;
@@ -50,7 +50,7 @@ public class Suffix
             root = new SuffixTrieNode();
 
             // Consider all suffixes of given string and insert
-            // them into the Suffix Trie using recursive function
+            // them into the SuffixTreeDistinctSubstring Trie using recursive function
             // insertSuffix() in SuffixTrieNode class
             for (int i = 0; i < s.length(); i++)
                 root.insertSuffix(s.substring(i));

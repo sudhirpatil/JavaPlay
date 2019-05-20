@@ -1,4 +1,4 @@
-package com.sp.playground.JavaPlay.others;
+package com.sp.playground.JavaPlay.test;
 
 import java.io.*;
 import java.util.*;
@@ -20,6 +20,48 @@ class Result2 {
      */
 
     public static int getMaxOccurrences(String s, int minLength, int maxLength, int maxUnique) {
+        int maxCount = 0;
+        // Get substrings with min length & check maxUnique condition
+        // count sub strings
+//        char[] arr = s.toCharArray();
+//        List<Character> subList = new LinkedList<>();
+        Map<Character, Integer> charCount = new HashMap<>();
+        for (int j=0; j< minLength-1; j++){
+            char ch = s.charAt(j);
+//            subList.add(ch);
+            charCount.merge(ch, 1, Integer::sum);
+        }
+//        char[] dedupArr = new char[26];
+
+        Map<String, Integer> subCount = new HashMap<>();
+        for(int i=minLength-1; i< s.length(); i++){
+            char ch = s.charAt(i);
+//            subList.add(ch);
+            charCount.merge(ch, 1, Integer::sum);
+            if(minLength<= maxUnique && charCount.size() <=maxUnique){
+                System.out.println("start index:"+(i-(minLength-1))+" minlength:"+i);
+                String minSubStr = s.substring(i-(minLength-1),i);
+                subCount.merge(minSubStr, 1, Integer::sum);
+            }
+            char firstchar = s.charAt(i-(minLength-1));
+            System.out.println("index:"+(i-(minLength-1)));
+            System.out.println("charat:"+s.charAt(i-(minLength-1)));
+            int cnt = charCount.get(firstchar);
+            if(cnt ==1){
+                charCount.remove(firstchar);
+            }else {
+                charCount.put(firstchar, cnt-1);
+            }
+        }
+
+        for(Map.Entry<String, Integer> entry: subCount.entrySet()){
+            if(maxCount < entry.getValue()) maxCount = entry.getValue();
+        }
+
+        return maxCount;
+    }
+
+    public static int getMaxOccurrencesOld(String s, int minLength, int maxLength, int maxUnique) {
         // Write your code here
         int maxOccur = 0;
         Map<String , Integer> subStrCount = new HashMap<>();
@@ -41,34 +83,6 @@ class Result2 {
             //remove first char for substring
             subCharCount.merge(sArr[subArrStart], -1, Integer::sum);
             if(subCharCount.get(sArr[subArrStart]) ==0) subCharCount.remove(sArr[subArrStart]);
-        }
-        for (Map.Entry<String, Integer> entry : subStrCount.entrySet()) {
-            System.out.println(entry.getKey() + "/" + entry.getValue());
-            if(maxOccur < entry.getValue()) maxOccur = entry.getValue();
-        }
-
-        return maxOccur;
-    }
-
-    public static int getMaxOccurrencesOld(String s, int minLength, int maxLength, int maxUnique) {
-        // Write your code here
-        int maxOccur = 0;
-        Map<String , Integer> subStrCount = new HashMap<>();
-        char[] sArr = s.toCharArray();
-        Set<Character> charSet = new HashSet<>();
-        for(int q=0; q< minLength-2; q++) charSet.add(sArr[q]);
-        for(int i=0;i<= sArr.length-minLength; i++){
-            charSet.add(sArr[i+minLength-2]);
-
-            for(int j=i+minLength-1; j< (i+maxLength) && j<sArr.length;j++){
-                charSet.add(sArr[j]);
-                if(charSet.size() > maxUnique){
-                    break;
-                }
-                subStrCount.merge(s.substring(i,j+1),1, Integer::sum);
-
-            }
-            charSet.remove(sArr[i]);
         }
         for (Map.Entry<String, Integer> entry : subStrCount.entrySet()) {
             System.out.println(entry.getKey() + "/" + entry.getValue());

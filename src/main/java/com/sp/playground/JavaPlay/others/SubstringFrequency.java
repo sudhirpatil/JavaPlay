@@ -8,7 +8,7 @@ import java.util.Arrays;
  * Prepare auxillary array which tells what characters we should start comparing when characters don't match, instead of going back to 0 again
  */
 
-public class SubStringCount {
+public class SubstringFrequency {
     public static int[] getAuxArr(char[] subArr){
         int[] auxArr = new int[subArr.length];
         Arrays.fill(auxArr, 0);

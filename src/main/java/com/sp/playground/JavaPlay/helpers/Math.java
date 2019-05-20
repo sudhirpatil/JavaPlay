@@ -13,5 +13,11 @@ public class Math {
         // Math round off, ceil etc
         // Cast data types
 
+        float f = 9.3f;
+        java.lang.Math.round(f); //Output is 9 : int
+        java.lang.Math.ceil(f); //Output is 10 : double
+        java.lang.Math.floor(f); //Output is 9 : double
+
+        int floorInt = (int) f; // Output is 9
     }
 }
