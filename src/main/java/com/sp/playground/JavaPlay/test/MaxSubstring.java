@@ -23,37 +23,40 @@ class Result2 {
         int maxCount = 0;
         // Get substrings with min length & check maxUnique condition
         // count sub strings
-//        char[] arr = s.toCharArray();
-//        List<Character> subList = new LinkedList<>();
+
+        // map to detect unique chars in sub string
         Map<Character, Integer> charCount = new HashMap<>();
         for (int j=0; j< minLength-1; j++){
             char ch = s.charAt(j);
-//            subList.add(ch);
             charCount.merge(ch, 1, Integer::sum);
         }
-//        char[] dedupArr = new char[26];
 
+        // map for substring count
         Map<String, Integer> subCount = new HashMap<>();
+        // any sub string with max length will have same number of substring with minLength
         for(int i=minLength-1; i< s.length(); i++){
             char ch = s.charAt(i);
-//            subList.add(ch);
             charCount.merge(ch, 1, Integer::sum);
+            // increment count for substring
             if(minLength<= maxUnique && charCount.size() <=maxUnique){
                 System.out.println("start index:"+(i-(minLength-1))+" minlength:"+i);
                 String minSubStr = s.substring(i-(minLength-1),i);
                 subCount.merge(minSubStr, 1, Integer::sum);
             }
-            char firstchar = s.charAt(i-(minLength-1));
+
+            // Decrement or remove first  char from map to find unique char
+            char firstChar = s.charAt(i-(minLength-1));
             System.out.println("index:"+(i-(minLength-1)));
             System.out.println("charat:"+s.charAt(i-(minLength-1)));
-            int cnt = charCount.get(firstchar);
+            int cnt = charCount.get(firstChar);
             if(cnt ==1){
-                charCount.remove(firstchar);
+                charCount.remove(firstChar);
             }else {
-                charCount.put(firstchar, cnt-1);
+                charCount.put(firstChar, cnt-1);
             }
         }
 
+        // find out max frequency sub string from sub string map
         for(Map.Entry<String, Integer> entry: subCount.entrySet()){
             if(maxCount < entry.getValue()) maxCount = entry.getValue();
         }
