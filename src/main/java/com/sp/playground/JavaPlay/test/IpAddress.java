@@ -1,5 +1,7 @@
 package com.sp.playground.JavaPlay.test;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -34,6 +36,24 @@ public class IpAddress {
         }
 
         return "Neither";
+    }
+
+    public static List<String> newIp(String[] ip_array){
+        //250-255 | 200-249 | 100-199 | 10-99 | 0-9
+        String v4Pattern = "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$";
+        // | 7777:: | 1111::8888
+        String v6Pattern = "(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){7,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4})";
+        List<String> results = new LinkedList<>();
+        for(String ipString : ip_array){
+            String isIp = "Neither";
+            if(ipString.contains(":") && ipString.matches(v4Pattern)){
+                isIp = "IPv4";
+            }else if(ipString.matches(v6Pattern)){
+                isIp = "IPv6";
+            }
+            results.add(isIp);
+        }
+        return results;
     }
 
     public static void main(String[] args) {

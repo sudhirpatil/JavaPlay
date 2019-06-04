@@ -1,6 +1,6 @@
 package com.sp.playground.JavaPlay.helpers;
 
-public class Strings {
+public class StringsHelper {
     public void stringMethods(){
         String str = "xyzabc";
 
@@ -9,5 +9,13 @@ public class Strings {
 
         // sub strings
         str.substring(0, 4); // endIndex in exclusive i.e index 4 is not included
+
+        str.charAt(1); // Character at specific index
+
+    }
+
+    public void charMethods(){
+        Character.isLetterOrDigit('0');  // To detect number characters
+
     }
 }

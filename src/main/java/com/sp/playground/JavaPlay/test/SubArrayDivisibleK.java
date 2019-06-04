@@ -37,8 +37,9 @@ class Result1 {
             modArr[((runningSum %k)+k)%k]++;
         }
 
+        count += modArr[0];
         for(int modCount : modArr){
-            count += (modCount * modCount-1)/2;
+            count += (modCount * (modCount-1))/2;
         }
         return count;
     }

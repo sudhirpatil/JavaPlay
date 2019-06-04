@@ -21,7 +21,10 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
-                    <release>8</release>
+                    <verbose>true</verbose>
+                    <!-- To cross-compile correctly, the new -release option replaces three flags: -source, -target and -bootclasspath. -->
+                    <!-- 8 doesn't work, ?? backward compatible but no fwd compatible -->
+                    <!--<release>8</release>-->
                 </configuration>
             </plugin>
         </plugins>
