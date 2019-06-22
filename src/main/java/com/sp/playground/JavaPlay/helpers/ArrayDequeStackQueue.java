@@ -23,7 +23,7 @@ public class ArrayDequeStackQueue {
 
     public static void dequeAsQueue(List<Integer> list){
         Deque<String> queue = new ArrayDeque<>();
-        // offer , poll , peek
+        // offer, poll, peek
         queue.offer("first");
         queue.offer("second");
 
@@ -32,8 +32,19 @@ public class ArrayDequeStackQueue {
         }
     }
 
-    public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(2,4,9,2,1,89);
-        dequeAsQueue(list);
+//    public static void main(String[] args) {
+//        List<Integer> list = Arrays.asList(2,4,9,2,1,89);
+//        dequeAsQueue(list);
+//    }
+
+    public static void main(String[] args){
+        Deque<Integer> queue = new ArrayDeque<>();
+        Deque<Integer> stack = new ArrayDeque<>();
+        for(int i=0;i<100;i++){
+            queue.offer(i);
+            stack.push(i);
+        }
+        System.out.println(queue.peek());
+        System.out.println(stack.peek());
     }
 }

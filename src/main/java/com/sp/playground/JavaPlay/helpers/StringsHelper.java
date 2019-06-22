@@ -12,6 +12,7 @@ public class StringsHelper {
 
         str.charAt(1); // Character at specific index
 
+
     }
 
     public void charMethods(){
