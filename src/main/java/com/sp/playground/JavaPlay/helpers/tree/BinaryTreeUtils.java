@@ -4,43 +4,26 @@ package com.sp.playground.JavaPlay.helpers.tree;
 import java.util.*;
 
 public class BinaryTreeUtils {
-  public static class TreePath {
-    private TreePath prev;
-    private boolean toLeft;
+  enum Traversal {PREORDER, INORDER, POSTORDER;}
 
-    public TreePath() {}
-
-    private TreePath(TreePath prev, boolean toLeft) {
-      this.prev = prev;
-      this.toLeft = toLeft;
-    }
-
-    public TreePath withLeft() { return new TreePath(this, true); }
-
-    public TreePath withRight() { return new TreePath(this, false); }
-
-    @Override
-    public String toString() {
-      if (prev == null) {
-        return "root";
-      }
-
-      return prev.toString() + (toLeft ? "->left" : "->right");
-    }
-  }
-
+  /**
+   * all 3 types of tree traversals, key is at what point in recursion you add tree.data to result
+   * @param tree
+   * @param result
+   * @param order
+   */
   private static void treeGenerateHelper(Object tree, List<Object> result,
-                                         int order) {
+                                         Traversal order) {
     if (tree != null) {
-      if (order == -1) {
+      if (order == Traversal.PREORDER) {
         result.add(getData(tree));
       }
       treeGenerateHelper(getLeft(tree), result, order);
-      if (order == 0) {
+      if (order == Traversal.INORDER) {
         result.add(getData(tree));
       }
       treeGenerateHelper(getRight(tree), result, order);
-      if (order == 1) {
+      if (order == Traversal.POSTORDER) {
         result.add(getData(tree));
       }
     }
@@ -49,24 +32,27 @@ public class BinaryTreeUtils {
   @SuppressWarnings("unchecked")
   public static <Node> List<Node> generatePreorder(Object tree) {
     List<Object> result = new ArrayList<>();
-    treeGenerateHelper(tree, result, -1);
+    treeGenerateHelper(tree, result, Traversal.PREORDER);
     return (List<Node>)result;
   }
 
   @SuppressWarnings("unchecked")
   public static <Node> List<Node> generateInorder(Object tree) {
     List<Object> result = new ArrayList<>();
-    treeGenerateHelper(tree, result, 0);
+    treeGenerateHelper(tree, result, Traversal.INORDER);
     return (List<Node>)result;
   }
 
   @SuppressWarnings("unchecked")
   public static <Node> List<Node> generatePostorder(Object tree) {
     List<Object> result = new ArrayList<>();
-    treeGenerateHelper(tree, result, 1);
+    treeGenerateHelper(tree, result, Traversal.POSTORDER);
     return (List<Node>)result;
   }
 
+  /**
+   * Find node in Tree
+   */
   private static Object findNode(Object node, Object val) {
     if (node != null) {
       if (val.equals(getData(node))) {
@@ -226,4 +212,29 @@ public class BinaryTreeUtils {
     throw new RuntimeException("Unsupported binary tree type: " +
                                tree.getClass().getName());
   }
+
+  //  public static class TreePath {
+//    private TreePath prev;
+//    private boolean toLeft;
+//
+//    public TreePath() {}
+//
+//    private TreePath(TreePath prev, boolean toLeft) {
+//      this.prev = prev;
+//      this.toLeft = toLeft;
+//    }
+//
+//    public TreePath withLeft() { return new TreePath(this, true); }
+//
+//    public TreePath withRight() { return new TreePath(this, false); }
+//
+//    @Override
+//    public String toString() {
+//      if (prev == null) {
+//        return "root";
+//      }
+//
+//      return prev.toString() + (toLeft ? "->left" : "->right");
+//    }
+//  }
 }
