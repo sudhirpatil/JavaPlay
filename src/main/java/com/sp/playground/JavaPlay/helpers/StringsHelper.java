@@ -39,6 +39,10 @@ import org.junit.runner.*;
 
    }
 
+    public static void main(String[] args) {
+      JUnitCore.main("Solution");
+    }
+
     Total number of all substrings e.g for abc -> a, b, c ab bc abc
     n * (n+1) / 2
 

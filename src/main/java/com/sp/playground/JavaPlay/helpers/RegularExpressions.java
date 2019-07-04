@@ -30,7 +30,7 @@ public class RegularExpressions {
         boolean  prefixMatch = "123lll".matches("^\\d{3}.*");
         System.out.println(prefixMatch);
 
-        // negative look ahead i.e a(?!b) a is not follwed by b
+        // negative look ahead i.e a(?!b) a is not followed by b
         System.out.println("axbxyz".matches("a(?!b).*"));
 
         // ?: To not to store grouped match in memory, useful when you want to group for repeat pattern match but don't want keep matches in memory

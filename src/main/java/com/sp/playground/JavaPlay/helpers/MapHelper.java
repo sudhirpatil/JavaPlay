@@ -36,10 +36,13 @@ public class MapHelper {
         Map<String, String> friends = new HashMap<String, String>();
         friends.merge("key1", "value1", String::concat);
 
-        // to update list/collection value
         Map<String, List<Integer>> mapList = new HashMap<>();
+        // to update list/collection value, avoid if else
         List<Integer> list = mapList.getOrDefault("test1", new ArrayList<>());
         list.add(1);
+        // OR
+        mapList.putIfAbsent("test2", new ArrayList<>());
+        mapList.get("test2").add(1);
 
         System.out.println();
     }
