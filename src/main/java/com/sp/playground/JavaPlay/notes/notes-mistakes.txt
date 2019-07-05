@@ -1,0 +1,6 @@
+ValidParenthesis:
+Missed important edge case with odd number of characters with * in between
+    Look through few use cases carefully, always plan design keeping them in mind
+Using 2 stack, one for ( and another for star
+stacks need not always contain characters, saving sequence number saved using complex data structures
+Stack could contain object with both character and sequence number if neededK
