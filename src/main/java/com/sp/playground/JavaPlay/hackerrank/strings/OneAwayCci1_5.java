@@ -2,8 +2,8 @@ package com.sp.playground.JavaPlay.hackerrank.strings;
 
 import java.io.*;
 import java.util.*;
-import org.junit.*;
-import org.junit.runner.*;
+//import org.junit.runner.*;
+//import org.junit.*;
 
 //Special String Again
 public class OneAwayCci1_5{

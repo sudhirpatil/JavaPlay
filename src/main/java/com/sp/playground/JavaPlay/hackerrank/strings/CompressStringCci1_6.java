@@ -2,9 +2,6 @@ package com.sp.playground.JavaPlay.hackerrank.strings;
 
 import java.io.*;
 import java.util.*;
-import org.junit.*;
-import org.junit.runner.*;
-
 
 //Special String Again
 public class CompressStringCci1_6{

@@ -50,8 +50,6 @@ hasCommonAncestor(parentChildPairs2, 1, 6) => false
  */
 import java.io.*;
 import java.util.*;
-import org.junit.*;
-import org.junit.runner.*;
 
 public class ParentChild {
 

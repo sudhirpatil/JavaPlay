@@ -44,7 +44,19 @@ public class MapHelper {
         mapList.putIfAbsent("test2", new ArrayList<>());
         mapList.get("test2").add(1);
 
-        System.out.println();
+        // To remove item from map while looping, using iterator and not for loops
+        Iterator<Map.Entry<String, Integer>> it = map.entrySet().iterator();
+        while (it.hasNext())
+        {
+            Map.Entry<String, Integer> entry = it.next();
+            int freq = entry.getValue();
+            if(freq ==1){
+                it.remove();
+            }else{
+                map.merge("key", -1, Integer::sum);
+            }
+
+        }
     }
 
     static void setHelper(){
