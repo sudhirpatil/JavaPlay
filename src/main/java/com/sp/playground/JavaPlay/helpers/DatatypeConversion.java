@@ -1,6 +1,19 @@
 package com.sp.playground.JavaPlay.helpers;
 
 public class DatatypeConversion {
+    public void DatatypeConversion(){
+        int aInt =0;
+
+        // int -> char
+        char c=(char)aInt;
+
+        // float/double to int by rounding lower
+        int roundedInt = (int) 11/2;
+
+        // converting operation on int to double
+        double result = ((double) 1+ 2)/2;
+    }
+
     public void fromString(){
         // String -> Integer
         Integer.parseInt("100");    //returns 100

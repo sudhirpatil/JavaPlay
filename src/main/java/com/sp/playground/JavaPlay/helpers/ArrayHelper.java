@@ -4,20 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class ArrayHelper {
-    public void DatatypeConversion(){
-        int aInt =0;
 
-        // int -> char
-        char c=(char)aInt;
-
-        // float/double to int by rounding lower
-        int roundedInt = (int) 11/2;
-
-        // converting operation on int to double
-        double result = ((double) 1+ 2)/2;
-
-
-    }
 
     public void arrayHelp(){
         // Instantiate array with specific length
