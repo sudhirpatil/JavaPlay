@@ -4,21 +4,25 @@ import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class ArrayDequeStackQueue {
+public class StackQueue {
     public static void dequeStack(List<Integer> list){
-        ArrayDeque<Integer> deque = new ArrayDeque<>();
+        ArrayDeque<Integer> stack = new ArrayDeque<>();
         // push , peek, pop
         // push to stack
         for(int item: list){
-            deque.push(item);
+            stack.push(item);
         }
         // Element at top of stack, does not remove element
-        System.out.println(deque.peek());
+        System.out.println(stack.peek());
         // pop from stack, pop method throws NoSuchElementException when a stack is empty.
-        while(!deque.isEmpty()){
-            System.out.println(deque.pop());
+        while(!stack.isEmpty()){
+            System.out.println(stack.pop());
         }
+
+        //convert queue to list
+        List<Integer> listStack = stack.stream().collect(Collectors.toList());
     }
 
     public static void dequeAsQueue(List<Integer> list){
@@ -32,10 +36,6 @@ public class ArrayDequeStackQueue {
         }
     }
 
-//    public static void main(String[] args) {
-//        List<Integer> list = Arrays.asList(2,4,9,2,1,89);
-//        dequeAsQueue(list);
-//    }
 
     public static void main(String[] args){
         Deque<Integer> queue = new ArrayDeque<>();

@@ -9,6 +9,12 @@ public class MapHelper {
         map.put("Steve", 2);
         map.put("James", 3);
 
+        Map<String, Integer> mapNew = new HashMap<String, Integer>(){{
+            put("Larry", 1);
+            put("Steve", 2);
+            put("James", 3);
+        }};
+
         // Iterate, if needed to modify external variable
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
             System.out.println(entry.getKey() + "/" + entry.getValue());

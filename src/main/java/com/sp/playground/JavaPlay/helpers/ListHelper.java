@@ -42,6 +42,7 @@ public class ListHelper {
         // Collection methods
         // Rotates elements of list, elements are moved like in circular list
         Collections.rotate(sList, -2);
+        Collections.swap(sList, 1,2);
         Collections.max(sList);
         Collections.min(sList, new Comparator<String>() {
             @Override

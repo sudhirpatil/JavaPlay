@@ -28,6 +28,8 @@ public class ArrayHelper {
         Arrays.sort(maxArr); // Sorting array of primitive type
         // Sorting Objects, using comparator
 //        Arrays.sort(T[]a , Comparator<T> b);
+        Arrays.binarySearch(intArr, 3);
+        Arrays.fill(intArr, 0);
 
         // Get copy of sub array
         int[] subArray = Arrays.copyOfRange(intArr, 2,3 + 1);
