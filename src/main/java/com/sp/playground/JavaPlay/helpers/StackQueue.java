@@ -20,6 +20,12 @@ public class StackQueue {
         while(!stack.isEmpty()){
             System.out.println(stack.pop());
         }
+        /*
+        Since elements are added removed from head aka first index
+        push == addFirst
+        pop == removeFirst
+        peek = peekFirst
+         */
 
         //convert queue to list
         List<Integer> listStack = stack.stream().collect(Collectors.toList());
@@ -30,10 +36,16 @@ public class StackQueue {
         // offer, poll, peek
         queue.offer("first");
         queue.offer("second");
-
         while(!queue.isEmpty()){
             System.out.println(queue.poll());
         }
+
+        /*
+        add at last , get from first
+        offer == addLast
+        poll == removeFirst
+        peek == peekFirst
+         */
     }
 
 

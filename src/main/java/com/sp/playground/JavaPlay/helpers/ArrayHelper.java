@@ -31,6 +31,8 @@ public class ArrayHelper {
         Arrays.binarySearch(intArr, 3);
         Arrays.fill(intArr, 0);
 
+        // create array of different size & copy contents of array
+        int[] biggerArray = Arrays.copyOf(intArr, intArr.length *2);
         // Get copy of sub array
         int[] subArray = Arrays.copyOfRange(intArr, 2,3 + 1);
 
@@ -39,7 +41,13 @@ public class ArrayHelper {
         // print nested string array
         String[][] nested = {{"row1col1", "row1col2"}, {"row2col1", "row2col2"}};
         Arrays.deepToString(nested);
+        // Convert Array to list, list is backed by array (not copy to list) so it is fixed size.
+        List<String> listStr = Arrays.asList(nested[0]);
+        // So all of the collections operation like max, min etc can be applied on array also
 
+        // Array rotation (circular) , replaces array elements in place
+        Collections.rotate(Arrays.asList(intArr),  -2); // moves back [2] to [0]
+        Collections.rotate(Arrays.asList(intArr),  2); // moves ahead [0] to [2] & [length-2] to [0]
     }
 
 	public static void main(String[] args){

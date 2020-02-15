@@ -41,7 +41,10 @@ public class ListHelper {
 
         // Collection methods
         // Rotates elements of list, elements are moved like in circular list
-        Collections.rotate(sList, -2);
+        Integer arr[] = {10, 20, 30, 40, 50};
+        Collections.rotate(Arrays.asList(arr), 2); // [40, 50, 10, 20, 30]
+        Collections.rotate(Arrays.asList(arr), -2); // [10, 20, 30, 40, 50]
+
         Collections.swap(sList, 1,2);
         Collections.max(sList);
         Collections.min(sList, new Comparator<String>() {
