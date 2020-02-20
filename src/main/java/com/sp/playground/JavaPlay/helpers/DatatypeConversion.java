@@ -1,17 +1,38 @@
 package com.sp.playground.JavaPlay.helpers;
 
 public class DatatypeConversion {
+
     public void DatatypeConversion(){
         int aInt =0;
 
-        // int -> char
+        // int->char, convert int to char i.e 2 int to -> '2' char
+        char charInt = '0' + 2; // add 2 to ascii value of '0', as ascii representation of numbers in sequence this becomes '2'
+        // char->int
+        int intVal = '2' - '0'; // returns 2
+
+        // int to char representing that ascii value i.e 65 -> 'A'
         char c=(char)aInt;
 
         // float/double to int by rounding lower
-        int roundedInt = (int) 11/2;
+        int roundedInt = (int) 11/2; //5
 
         // converting operation on int to double
         double result = ((double) 1+ 2)/2;
+    }
+
+    public void charToInt(){
+        // Add / Subtract char '0' to convert to int / char
+
+        // int -> char
+        char ch2 = (char)  ('0' + 2);
+
+        // char -> int
+        int chInt = '2' - '0';
+    }
+
+    public static void main(String[] args) {
+        System.out.println((char)65);
+        System.out.println((char)('0' + 2));
     }
 
     public void fromString(){
@@ -65,13 +86,5 @@ public class DatatypeConversion {
         return true;
     }
 
-    public void charToInt(){
-        // Add / Subtract char '0' to convert to int / char
 
-        // int -> char
-        char ch2 = (char)  ('0' + 2);
-
-        // char -> int
-        int chInt = '2' - '0';
-    }
 }

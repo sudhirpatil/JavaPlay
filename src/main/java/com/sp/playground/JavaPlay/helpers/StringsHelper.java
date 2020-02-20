@@ -6,6 +6,7 @@ public class StringsHelper {
 
         // check if it starts with xy
         str.startsWith("xy");
+        str.endsWith("abc");
 
         //substring:: endIndex in exclusive i.e index 4 is not included but startIndex is included
         str.substring(0, 4);
@@ -15,8 +16,22 @@ public class StringsHelper {
         // Character at specific index
         str.charAt(1);
 
+        // first occurrence of string "abc"
+        str.indexOf("abc");
+        // first occurrence after index 2
+        str.indexOf("abc", 2);
+
+        // Returns boolean, returns false if string in null
+        str.equals("xyx");
+        // return diff value 0 if equal, >0 if lexically ahead, <0 if lexically behind
+        // exception if string is null
+        // bit costly as it go through each of the character comparisons
+        str.compareTo("abc");
+
         // to Character array
         char[] chArray = str.toCharArray();
+        // to char stream for chaining map etc
+        str.chars().map(c -> c+1);
     }
 
     public void charMethods(){
