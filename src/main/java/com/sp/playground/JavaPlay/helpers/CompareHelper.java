@@ -35,14 +35,17 @@ public class CompareHelper {
         }
     }
 
-    // Comparator using new instance of this object
-    static Comparator<Pair> pairComparator = new Comparator<Pair>() {
+    // Comparator using new instance of this object, in java 8
+    static Comparator<Pair> pairComparator = (Pair o1, Pair o2) -> o1.value - o2.value;
+    // old way
+    static Comparator<Pair> pairComparatorOld = new Comparator<Pair>() {
         @Override
         public int compare(Pair o1, Pair o2) {
             //descending
             return o2.value - o1.value;
         }
     };
+
 
     public static void sort(){
         Pair[] pairs = {new Pair("1", 4), new Pair("2", 2), new Pair("3", 1), new Pair("4", 3)};
