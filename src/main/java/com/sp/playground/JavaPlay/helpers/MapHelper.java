@@ -20,7 +20,7 @@ public class MapHelper {
             System.out.println(entry.getKey() + "/" + entry.getValue());
         }
 
-        // Iterate functional way, but cannot modify external variables
+        // Iterate functional way, but cannot modify variables defined outside
         map.
                 forEach((key, value) -> System.out.println(key + " " + value));
         map.entrySet().
@@ -29,7 +29,7 @@ public class MapHelper {
 
         // Put value if key doesn't exist,
         map.putIfAbsent("Darwin", 6);
-        // Compute value if key doesn't exist, new String() can be any method
+        // Compute value using function & insert to map, if key doesn't exist
         map.computeIfAbsent("test", k -> new Integer(2));
 
         // merge only works for primitive types
@@ -63,6 +63,28 @@ public class MapHelper {
             }
 
         }
+
+        // TreeMap for sorted map by keys
+    }
+
+    public static void testLinkHashMap() {
+        //Maintains only insert order no Access order
+        LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
+
+        // To maintain insertion order + access order
+        // Order elements by access, can be used for LRU implementation
+        //(int initialCapacity, float loadFactor, boolean accessOrder <true use access order, false use insert order>)
+        LinkedHashMap<String, String> mapAccess = new LinkedHashMap<String, String>(10, 0.8f, true); //Maintains only insert order no Access order
+        // put, putIfAbsent, get, getOrDefault, compute, computeIfAbsent, computeIfPresent, or merge methods move element to least recently used
+        // Iterations will print least recently used first & most recently used last
+
+        // LRU with fixed size & remove oldest element automatically, using removeEldestEntry
+        new LinkedHashMap<Integer, Integer>(10, 0.8f, true){
+            @Override
+            protected boolean removeEldestEntry(Map.Entry<Integer, Integer> e){
+                return this.size() > 10;
+            }
+        };
     }
 
     static void setHelper(){
