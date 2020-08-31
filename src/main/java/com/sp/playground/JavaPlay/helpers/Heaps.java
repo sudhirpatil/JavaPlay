@@ -4,8 +4,8 @@ import java.util.PriorityQueue;
 
 public class Heaps {
     public static void heapHelper(){
-        // minHeap -> to get min k elements, keeps max at element at the top, compare 1st - 2nd
-        // maxHeap -> to get max k elements, keeps min at the top, compare 2nd - 1st
+        // minHeap -> to get min k elements, keeps max element at the top, compare 1st - 2nd
+        // maxHeap -> to get max k elements, keeps min element at the top, compare 2nd - 1st
         // default priority queue is min heap
         PriorityQueue<String> minHeap = new PriorityQueue<>();
 
