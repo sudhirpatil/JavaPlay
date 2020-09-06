@@ -30,5 +30,9 @@ public class StringBuilder {
         System.out.println("StringBuilder = " + sBuilder);
 //        System.out.println("Capacity of StringBuilder = "
 //                + capacity);
+
+        /* Diff StringBuilder with char[] array :
+                StringBuilder is just wrapper over char[], with auto resizing capability for insert/delete
+         */
     }
 }

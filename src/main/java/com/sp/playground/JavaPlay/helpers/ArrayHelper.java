@@ -29,7 +29,6 @@ public class ArrayHelper {
         // Sorting Objects, using comparator
 //        Arrays.sort(T[]a , Comparator<T> b);
         Arrays.binarySearch(intArr, 3);
-        Arrays.fill(intArr, 0);
 
         // create array of different size & copy contents of array
         int[] biggerArray = Arrays.copyOf(intArr, intArr.length *2);

@@ -4,39 +4,41 @@ import java.util.*;
 
 public class MapHelper {
     public void mapHelp(){
+        // Initializing map
         Map<String, Integer> map = new HashMap<>();
         map.put("Larry", 1);
         map.put("Steve", 2);
         map.put("James", 3);
-
+        //
         Map<String, Integer> mapNew = new HashMap<String, Integer>(){{
             put("Larry", 1);
             put("Steve", 2);
             put("James", 3);
         }};
 
+        //Iteration
         // Iterate, if needed to modify external variable
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
             System.out.println(entry.getKey() + "/" + entry.getValue());
         }
-
         // Iterate functional way, but cannot modify variables defined outside
         map.
                 forEach((key, value) -> System.out.println(key + " " + value));
         map.entrySet().
                 forEach(entry -> System.out.println(entry.getKey() + " " + entry.getValue()));
 
+        // Add key with default value if not exists, if exists increment value
+        map.put("key1", map.getOrDefault("key1", 0)+1);
+        // merge only works for primitive types
+        // Increment map value
+        map.merge("test",1, Integer::sum);
 
         // Put value if key doesn't exist,
         map.putIfAbsent("Darwin", 6);
         // Compute value using function & insert to map, if key doesn't exist
         map.computeIfAbsent("test", k -> new Integer(2));
-
-        // merge only works for primitive types
-        // Increment map value
-        map.merge("test",1, Integer::sum);
-        //or
-        map.put("key1", map.getOrDefault("key1", 0)+1);
+        // compute new value with function if key already exists
+        map.computeIfPresent("key", (key, value) -> value + 10);
 
         // Append to String Value
         Map<String, String> friends = new HashMap<String, String>();

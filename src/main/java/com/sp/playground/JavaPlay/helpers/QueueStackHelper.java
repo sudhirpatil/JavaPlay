@@ -23,14 +23,20 @@ public class QueueStackHelper {
         deque.addFirst(564);
         // addLast() method to insert at end
         deque.addLast(24);
-        // element() method : to get Head element
+
+        //peek methods
+        // element() method : to get Head element, d
         System.out.println("\nHead Element using element(): " +
-                deque.element());
+                deque.peek());
         // getFirst() method : to get Head element
         System.out.println("Head Element using getFirst(): " +
-                deque.getFirst());
+                deque.peekFirst());
         // getLast() method : to get last element
         System.out.println("Last Element using getLast(): " +
-                deque.getLast());
+                deque.peekLast());
+
+        //remove first and last element
+        deque.pollFirst();
+        deque.pollLast();
     }
 }

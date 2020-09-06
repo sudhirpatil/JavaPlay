@@ -20,6 +20,7 @@ public class StringsHelper {
         str.indexOf("abc");
         // first occurrence after index 2
         str.indexOf("abc", 2);
+        str.lastIndexOf("b");
 
         // Returns boolean, returns false if string in null
         str.equals("xyx");
