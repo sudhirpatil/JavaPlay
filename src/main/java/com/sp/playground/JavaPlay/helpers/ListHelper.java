@@ -7,11 +7,9 @@ public class ListHelper {
     public void helpList(){
         // List is interface, instantiate with ArrayList etc
         List<Integer> list = new ArrayList();
-        // Initializing List
-        List<String> sList = Arrays.asList("one", "two", "three");
-//        sList.remove(2); // cannot do this? test it
-        // Only in JDK 9
-//        List<String> initializedList2 = List.of("one", "two", "three");
+        // Initializing Fixed Length List, since list is just wrapper over array. Can do add & remove
+        // Also can be used to quickly create tuple
+        List<String> sList = Arrays.asList("one", "two");
 
         // Iterate list
         for(String item : sList){
@@ -21,8 +19,38 @@ public class ListHelper {
             System.out.println(item);
         });
 
-        sList.add(2, "test"); // add element at index 2 and shifts if any existing elements
+        // Collections methods
+        Integer arr[] = {10, 20, 30, 40, 50};
+        // Rotates elements of list, elements are moved like in circular list
+        Collections.rotate(Arrays.asList(arr), 2); // [40, 50, 10, 20, 30]
+        Collections.rotate(Arrays.asList(arr), -2); // [10, 20, 30, 40, 50]
+        // Swap elements
+        Collections.swap(sList, 1,2);
+        // Search
+        Collections.binarySearch(sList, "two");
+        // Min Max
+        Collections.max(sList);
+        Collections.min(sList, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareToIgnoreCase(o2);
+            }
+        });
+        // Sort
+        Collections.sort(sList);
+
+        //List Object methods
+        //Check if empty
+        sList.isEmpty();
+        // iterator, helpful to keep track of current element
+        sList.iterator();
+        // sublist
+        sList.subList(1,4);
+        // to array
+        sList.toArray();
+        // Sort
         sList.sort((a, b) -> a.compareTo(b));
+        sList.add(2, "test"); // add element at index 2 and shifts if any existing elements
         sList.addAll(Arrays.asList("four", "five"));
         sList.replaceAll(value -> value+"new");
         sList.removeAll(Arrays.asList("four", "five"));
@@ -32,6 +60,8 @@ public class ListHelper {
                 return s.contains("o");
             }
         });
+        // Clear all elements
+        sList.clear();
 
 
         //Functional way to iterate
@@ -39,19 +69,6 @@ public class ListHelper {
                 filter(item -> item.contains("x")).
                 forEach(System.out::println);
 
-        // Collection methods
-        // Rotates elements of list, elements are moved like in circular list
-        Integer arr[] = {10, 20, 30, 40, 50};
-        Collections.rotate(Arrays.asList(arr), 2); // [40, 50, 10, 20, 30]
-        Collections.rotate(Arrays.asList(arr), -2); // [10, 20, 30, 40, 50]
 
-        Collections.swap(sList, 1,2);
-        Collections.max(sList);
-        Collections.min(sList, new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.compareToIgnoreCase(o2);
-            }
-        });
     }
 }

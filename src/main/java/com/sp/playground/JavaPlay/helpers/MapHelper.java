@@ -29,9 +29,7 @@ public class MapHelper {
 
         // Add key with default value if not exists, if exists increment value
         map.put("key1", map.getOrDefault("key1", 0)+1);
-        // merge only works for primitive types
-        // Increment map value
-        map.merge("test",1, Integer::sum);
+
 
         // Put value if key doesn't exist,
         map.putIfAbsent("Darwin", 6);
@@ -39,11 +37,15 @@ public class MapHelper {
         map.computeIfAbsent("test", k -> new Integer(2));
         // compute new value with function if key already exists
         map.computeIfPresent("key", (key, value) -> value + 10);
+        // merge only works for primitive types
+        // Increment map value
+        map.merge("test",1, Integer::sum);
 
         // Append to String Value
         Map<String, String> friends = new HashMap<String, String>();
         friends.merge("key1", "value1", String::concat);
 
+        // Collections as map values
         Map<String, List<Integer>> mapList = new HashMap<>();
         // to update list/collection value, avoid if else
         List<Integer> list = mapList.getOrDefault("test1", new ArrayList<>());
@@ -66,17 +68,13 @@ public class MapHelper {
 
         }
 
-        // TreeMap for sorted map by keys
-    }
+        // TreeMap :: for sorted map by keys
 
-    public static void testLinkHashMap() {
-        //Maintains only insert order no Access order
-        LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
-
-        // To maintain insertion order + access order
-        // Order elements by access, can be used for LRU implementation
-        //(int initialCapacity, float loadFactor, boolean accessOrder <true use access order, false use insert order>)
-        LinkedHashMap<String, String> mapAccess = new LinkedHashMap<String, String>(10, 0.8f, true); //Maintains only insert order no Access order
+        //LinkedHashMap :: Default is insertion order, Note remove & add is required to maintain order for existing value updates
+        LinkedHashMap<String, String> linkedMap = new LinkedHashMap<String, String>();
+        // To maintain Access order, pass 3rd param as True
+        LinkedHashMap<String, String> mapAccess = new LinkedHashMap<String, String>(10, 0.8f, true);
+        // ** LinkedHashMap can be used for LRU cache with o(1) access to each node, removeEldestEntry can be used to remove oldest entry automatically
         // put, putIfAbsent, get, getOrDefault, compute, computeIfAbsent, computeIfPresent, or merge methods move element to least recently used
         // Iterations will print least recently used first & most recently used last
 
@@ -87,11 +85,97 @@ public class MapHelper {
                 return this.size() > 10;
             }
         };
+
+
+
+        // Sets
+        Set<Integer> set = new HashSet<>(Arrays.asList(1, 2));
+        Set<Integer> newSet = new HashSet<Integer>(set);
+        // Intersection, retain only common elements
+        newSet.retainAll(set);
+        // Find difference
+        newSet.removeAll(set);
+        // Linked HashSet to maintain the insertion order
+        Set<String> lh = new LinkedHashSet<String>();
+
+        // TreeSet to iterate elements in ascending order. descendingIterator can be used to iterate in descending order
+        TreeSet<Integer> treeSet = new TreeSet<>(set);
+        // set with all the elements smaller
+        treeSet.headSet(1, true);
+        // Set with all the elements greater
+        treeSet.tailSet(1, true);
+        // get subset between numbers
+        treeSet.subSet(1, true, 3, true);
+        // get first number
+        treeSet.first();
+        // get Last number
+        treeSet.last();
+        // remove first & last element like stack/queue
+        treeSet.pollFirst();
+        treeSet.pollLast();
+        //modification of set using iterator
+        Iterator<Integer> iterator = set.iterator();
+        while(iterator.hasNext()){
+            int x = (int) iterator.next();
+            if(x%2 ==0) iterator.remove();
+        }
+        // print each element
+        set.stream().forEach(System.out::println);
+    }
+
+    public static void main(String[] args) {
+
+            //we have to define object as TreeMap to use NavigableMap functions
+            TreeMap<Integer,String> map = new TreeMap<>();
+            for(int i=0;i<10;i++) {
+                map.put(i, 10-i+"");
+            }
+
+            System.out.println(map);
+
+            //find id closest to 5, lower and higher
+            Map.Entry<Integer,String> entry = map.lowerEntry(5);
+            System.out.println("Closest Lower key than 5 is "+entry);
+            entry = map.higherEntry(5);
+            System.out.println("Closest Higher key than 5 is "+entry);
+
+            System.out.println("Closest Lower key than 4 is "+map.lowerKey(4));
+
+            entry = map.floorEntry(5);
+            System.out.println("Closest floor entry than 5 is "+entry);
+
+            entry = map.ceilingEntry(4);
+            System.out.println("Closest ceiling key than 4 is "+entry);
+
+            entry = map.firstEntry();
+            System.out.println("First Entry is "+entry);
+
+            entry = map.lastEntry();
+            System.out.println("Last Entry is "+entry);
+
+            Map<Integer, String> reversedMap = map.descendingMap();
+            System.out.println("Reversed Map: "+reversedMap);
+
+            //poll and remove first, last entries
+            entry = map.pollFirstEntry();
+            System.out.println("First Entry is "+entry);
+            entry = map.pollLastEntry();
+            System.out.println("Last Entry is "+entry);
+            System.out.println("Updated Map: "+map);
+
+            //submap example
+            Map<Integer, String> subMap = map.subMap(2, true, 6, true);
+            System.out.println("Submap: "+subMap);
+
+            subMap = map.headMap(5, true);
+            System.out.println("HeadMap: "+subMap);
+
+            subMap = map.tailMap(5, true);
+            System.out.println("TailMap: "+subMap);
     }
 
     static void setHelper(){
-        // Initialize hashset
-        Set<Integer> set = new HashSet<>(Arrays.asList(1, 2));
+
 
     }
 
