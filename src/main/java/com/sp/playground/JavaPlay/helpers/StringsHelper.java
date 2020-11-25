@@ -3,7 +3,6 @@ package com.sp.playground.JavaPlay.helpers;
 public class StringsHelper {
     public void stringMethods(){
         String str = "xyzabc";
-
         // check if it starts with xy
         str.startsWith("xy");
         str.endsWith("abc");
@@ -37,7 +36,7 @@ public class StringsHelper {
 
     public void charMethods(){
         Character.isLetterOrDigit('0');  // To detect number characters
-
+        Character.getNumericValue('2');
     }
 
     /* String Problem solving notes

@@ -1,14 +1,13 @@
 package com.sp.playground.JavaPlay.helpers;
 
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Deque;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class StackQueue {
     public static void dequeStack(List<Integer> list){
-        ArrayDeque<Integer> stack = new ArrayDeque<>();
+        Deque<Integer> stack = new ArrayDeque<>();
+        stack.push(1);
+        stack.pop();
         // push , peek, pop
         // push to stack
         for(int item: list){
@@ -27,6 +26,12 @@ public class StackQueue {
         peek = peekFirst
          */
 
+        // Iterate stack in reverse order i.e LIFO ( stack is FIFO)
+        Iterator<Integer> revIter = stack.descendingIterator();
+        while (revIter.hasNext()){
+            System.out.println(revIter.next());
+        }
+
         //convert queue to list
         List<Integer> listStack = stack.stream().collect(Collectors.toList());
     }
@@ -35,7 +40,7 @@ public class StackQueue {
         Deque<String> queue = new ArrayDeque<>();
         // offer, poll, peek
         queue.offer("first");
-        queue.offer("second");
+        queue.poll();
         while(!queue.isEmpty()){
             System.out.println(queue.poll());
         }

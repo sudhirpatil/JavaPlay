@@ -4,12 +4,10 @@ public class DatatypeConversion {
 
     public void DatatypeConversion(){
         int aInt =0;
-
         // int->char, convert int to char i.e 2 int to -> '2' char
         char charInt = '0' + 2; // add 2 to ascii value of '0', as ascii representation of numbers in sequence this becomes '2'
         // char->int
         int intVal = '2' - '0'; // returns 2
-
         // int to char representing that ascii value i.e 65 -> 'A'
         char c=(char)aInt;
 
@@ -33,6 +31,9 @@ public class DatatypeConversion {
     public static void main(String[] args) {
         System.out.println((char)65);
         System.out.println((char)('0' + 2));
+        System.out.println(Character.getNumericValue('2'));
+        System.out.println(Character.isLetterOrDigit('-'));
+        Integer.compare(1,3);
     }
 
     public void fromString(){

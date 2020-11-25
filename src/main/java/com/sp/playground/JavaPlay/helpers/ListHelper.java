@@ -10,7 +10,7 @@ public class ListHelper {
         // Initializing Fixed Length List, since list is just wrapper over array. Can do add & remove
         // Also can be used to quickly create tuple
         List<String> sList = Arrays.asList("one", "two");
-
+//        Integer[] arr = list.toArray(Integer[]:: new);
         // Iterate list
         for(String item : sList){
             System.out.println(item);

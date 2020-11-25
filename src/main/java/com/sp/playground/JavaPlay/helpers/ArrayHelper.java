@@ -30,7 +30,7 @@ public class ArrayHelper {
 //        Arrays.sort(T[]a , Comparator<T> b);
         Arrays.binarySearch(intArr, 3);
 
-        // create array of different size & copy contents of array
+        // Increase size of array with same contents
         int[] biggerArray = Arrays.copyOf(intArr, intArr.length *2);
         // Get copy of sub array
         int[] subArray = Arrays.copyOfRange(intArr, 2,3 + 1);
