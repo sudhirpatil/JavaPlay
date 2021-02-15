@@ -30,7 +30,8 @@ public class MapHelper {
         for(int value: map.values()){
             System.out.println("Value: "+value);
         }
-        // get Set of keys with .keySet
+
+        // get Set<> of keys with .keySet
         for(String key: map.keySet()){
             System.out.println("Key: "+key);
         }
@@ -38,6 +39,7 @@ public class MapHelper {
         map.containsKey("Larry");
         map.getOrDefault("key1", 0);
         // Add key with default value if not exists, if exists increment value
+        // This will not work when Map value is collection, as .add/.put won't return Collection
         map.put("key1", map.getOrDefault("key1", 0)+1);
         // Put value if key doesn't exist,
         map.putIfAbsent("Darwin", 6);
@@ -57,11 +59,11 @@ public class MapHelper {
         // Collections as map values
         Map<String, List<Integer>> mapList = new HashMap<>();
         // to update list/collection value, avoid if else
-        List<Integer> list = mapList.getOrDefault("test1", new ArrayList<>());
-        list.add(1);
-        // OR
         mapList.putIfAbsent("test2", new ArrayList<>());
         mapList.get("test2").add(1);
+        // OR
+        List<Integer> list = mapList.getOrDefault("test1", new ArrayList<>());
+        list.add(1);
 
         // To remove item from map while looping, using iterator and not for loops
         Iterator<Map.Entry<String, Integer>> it = map.entrySet().iterator();
@@ -120,6 +122,12 @@ public class MapHelper {
         newSet.retainAll(set);
         // Find difference
         newSet.removeAll(set);
+        // Iterate over set elements
+        for(Integer i : set){
+            System.out.println("set element : "+i);
+        }
+
+
         // Linked HashSet to maintain the insertion order
         Set<String> lh = new LinkedHashSet<String>();
 

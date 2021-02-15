@@ -46,8 +46,10 @@ public class ListHelper {
         sList.iterator();
         // sublist
         sList.subList(1,4);
-        // to array
-        sList.toArray();
+        // convert to Array only for objects or non primitive types
+        String[] arrStr = sList.toArray(new String[0]);
+        // primitive types like int/long.. etc have to be through for loop
+
         // Sort
         sList.sort((a, b) -> a.compareTo(b));
         sList.add(2, "test"); // add element at index 2 and shifts if any existing elements

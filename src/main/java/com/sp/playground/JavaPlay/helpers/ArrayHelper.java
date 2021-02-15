@@ -47,10 +47,20 @@ public class ArrayHelper {
         // Array rotation (circular) , replaces array elements in place
         Collections.rotate(Arrays.asList(intArr),  -2); // moves back [2] to [0]
         Collections.rotate(Arrays.asList(intArr),  2); // moves ahead [0] to [2] & [length-2] to [0]
+
     }
 
 	public static void main(String[] args){
+        Set<Integer> intList = new HashSet<>();
+        intList.add(10);
+        intList.add(20);
+        intList.add(30);
 
+//        Integer[] intArray = new Integer[intList.size()];
+        Integer[] intArray  = intList.toArray(new Integer[0]);
+
+        for(Integer i : intArray)
+            System.out.println(i);
     }
 
 }
