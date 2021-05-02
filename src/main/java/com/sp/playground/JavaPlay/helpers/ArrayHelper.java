@@ -4,8 +4,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class ArrayHelper {
-
-
     public void arrayHelp(){
         // Instantiate array with specific length
         int[] maxArr = new int[10];
@@ -26,6 +24,9 @@ public class ArrayHelper {
 
         // Sorting
         Arrays.sort(maxArr); // Sorting array of primitive type
+        // Sort multidimensional array, based on first element
+        int[][] arr = {{6,4},{1,2},{4,5} };
+        Arrays.sort(arr, (a, b) -> Integer.compare(a[0], b[0]));
         // Sorting Objects, using comparator
 //        Arrays.sort(T[]a , Comparator<T> b);
         Arrays.binarySearch(intArr, 3);
@@ -48,19 +49,29 @@ public class ArrayHelper {
         Collections.rotate(Arrays.asList(intArr),  -2); // moves back [2] to [0]
         Collections.rotate(Arrays.asList(intArr),  2); // moves ahead [0] to [2] & [length-2] to [0]
 
+        //Merge 2 arrays
+        int[] first = {1,2,3}, second = {6,7};
+        int[] result = Arrays.copyOf(first, first.length + second.length);
+        System.arraycopy(second, 0, result, first.length, second.length);
     }
 
 	public static void main(String[] args){
-        Set<Integer> intList = new HashSet<>();
-        intList.add(10);
-        intList.add(20);
-        intList.add(30);
+        boolean[] bool = new boolean[4];
 
-//        Integer[] intArray = new Integer[intList.size()];
-        Integer[] intArray  = intList.toArray(new Integer[0]);
-
-        for(Integer i : intArray)
-            System.out.println(i);
+        List<Integer> diffs = new ArrayList<>();
+        diffs.add(11);
+        diffs.set(0, 22);
+        System.out.println(diffs.get(0));
+//        Set<Integer> intList = new HashSet<>();
+//        intList.add(10);
+//        intList.add(20);
+//        intList.add(30);
+//
+////        Integer[] intArray = new Integer[intList.size()];
+//        Integer[] intArray  = intList.toArray(new Integer[0]);
+//
+//        for(Integer i : intArray)
+//            System.out.println(i);
     }
 
 }

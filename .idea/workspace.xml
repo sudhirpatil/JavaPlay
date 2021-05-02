@@ -22,21 +22,31 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e19a696-2502-442e-91f7-63cf96dcb508" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/JavaPlay.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/Java-Helpers.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/SearchNSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="5e19a696-2502-442e-91f7-63cf96dcb508" name="Default Changelist" comment="trie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/Heaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/Heaps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/MaxArraySum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/graph/ParentChild.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/hashmap/CountTriplets.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/hashmap/FrequencyQuery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/hashmap/HashRansomNote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/hashmap/SherlockAnagram.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/sorting/ComparatorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/sorting/FraudActivityNotification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/sorting/MarkMaximumToys.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/string.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/strings/AlternatingCharacter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/strings/CompressStringCci1_6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/strings/GenerateParenthesisLeetCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/strings/MakingAnagrams.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/strings/MatchingParenthesis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/strings/OneAwayCci1_5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/strings/Permutations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/strings/RearrangeStringCoderpad.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/strings/TaskSchedulerLeetCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/hackerrank/strings/ValidParenthesis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/ArrayHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/ArrayHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/ListHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/ListHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/MapHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/MapHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/StackQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/StackQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,9 +86,61 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.BeautifulArrangement">
+    <configuration name="ArrayHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sp.playground.JavaPlay.helpers.ArrayHelper" />
+      <module name="JavaPlay" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sp.playground.JavaPlay.helpers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeautifulArrangement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="epi.leetcode.BeautifulArrangement" />
+      <module name="epi_judge_java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="epi.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MapHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sp.playground.JavaPlay.helpers.MapHelper" />
+      <module name="JavaPlay" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="epi.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StackQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sp.playground.JavaPlay.helpers.StackQueue" />
+      <module name="JavaPlay" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sp.playground.JavaPlay.helpers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringBuilderHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sp.playground.JavaPlay.helpers.StringBuilderHelper" />
       <module name="JavaPlay" />
       <extension name="coverage">
         <pattern>
@@ -92,6 +154,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BeautifulArrangement" />
+        <item itemvalue="Application.ArrayHelper" />
+        <item itemvalue="Application.StackQueue" />
+        <item itemvalue="Application.StringBuilderHelper" />
         <item itemvalue="Application.MapHelper" />
       </list>
     </recent_temporary>
@@ -105,6 +171,28 @@
       <option name="presentableId" value="Default" />
       <updated>1600913041775</updated>
     </task>
+    <task id="LOCAL-00001" summary="map, heap &amp; list">
+      <created>1602734110115</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602734110115</updated>
+    </task>
+    <task id="LOCAL-00002" summary="map, heap &amp; list">
+      <created>1606267149078</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606267149078</updated>
+    </task>
+    <task id="LOCAL-00003" summary="trie">
+      <created>1613378719779</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613378719779</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,27 +205,41 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="map, heap &amp; list" />
+    <MESSAGE value="trie" />
+    <option name="LAST_COMMIT_MESSAGE" value="trie" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1380" height="189" key="GridCell.Tab.0.bottom" timestamp="1602473785501">
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1618442175804">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1237" height="159" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1617669583459" />
+    <state width="1380" height="159" key="GridCell.Tab.0.bottom/0.0.1422.760@0.0.1422.760" timestamp="1615853174391" />
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1618442175804" />
+    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1618442175804">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1237" height="159" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1617669583459" />
+    <state width="1380" height="159" key="GridCell.Tab.0.center/0.0.1422.760@0.0.1422.760" timestamp="1615853174391" />
+    <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1618442175804" />
+    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1618442175804">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1237" height="159" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1617669583459" />
+    <state width="1380" height="159" key="GridCell.Tab.0.left/0.0.1422.760@0.0.1422.760" timestamp="1615853174390" />
+    <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1618442175804" />
+    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1618442175804">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1237" height="159" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1617669583459" />
+    <state width="1380" height="159" key="GridCell.Tab.0.right/0.0.1422.760@0.0.1422.760" timestamp="1615853174391" />
+    <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1618442175804" />
+    <state x="305" y="114" key="Vcs.Push.Dialog.v2" timestamp="1613378723981">
       <screen x="0" y="0" width="1422" height="760" />
     </state>
-    <state width="1380" height="189" key="GridCell.Tab.0.bottom/0.0.1422.760@0.0.1422.760" timestamp="1602473785501" />
-    <state width="1380" height="189" key="GridCell.Tab.0.center" timestamp="1602473785500">
-      <screen x="0" y="0" width="1422" height="760" />
-    </state>
-    <state width="1380" height="189" key="GridCell.Tab.0.center/0.0.1422.760@0.0.1422.760" timestamp="1602473785500" />
-    <state width="1380" height="189" key="GridCell.Tab.0.left" timestamp="1602473785498">
-      <screen x="0" y="0" width="1422" height="760" />
-    </state>
-    <state width="1380" height="189" key="GridCell.Tab.0.left/0.0.1422.760@0.0.1422.760" timestamp="1602473785498" />
-    <state width="1380" height="189" key="GridCell.Tab.0.right" timestamp="1602473785500">
-      <screen x="0" y="0" width="1422" height="760" />
-    </state>
-    <state width="1380" height="189" key="GridCell.Tab.0.right/0.0.1422.760@0.0.1422.760" timestamp="1602473785500" />
-    <state x="421" y="113" width="581" height="534" key="find.popup" timestamp="1602474390107">
-      <screen x="0" y="0" width="1422" height="760" />
-    </state>
-    <state x="421" y="113" width="581" height="534" key="find.popup/0.0.1422.760@0.0.1422.760" timestamp="1602474390107" />
+    <state x="305" y="114" key="Vcs.Push.Dialog.v2/0.0.1422.760@0.0.1422.760" timestamp="1613378723981" />
   </component>
 </project>

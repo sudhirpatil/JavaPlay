@@ -30,6 +30,7 @@ public class ListHelper {
         Collections.binarySearch(sList, "two");
         // Min Max
         Collections.max(sList);
+        Collections.min(sList, (a, b) -> a.compareTo(b));
         Collections.min(sList, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
@@ -53,6 +54,7 @@ public class ListHelper {
         // Sort
         sList.sort((a, b) -> a.compareTo(b));
         sList.add(2, "test"); // add element at index 2 and shifts if any existing elements
+        sList.set(2, "replace"); // Replaces element at 2nd index, make sure element at 2 i already exists before set
         sList.addAll(Arrays.asList("four", "five"));
         sList.replaceAll(value -> value+"new");
         sList.removeAll(Arrays.asList("four", "five"));

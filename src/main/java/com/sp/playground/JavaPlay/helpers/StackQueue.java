@@ -56,12 +56,16 @@ public class StackQueue {
 
     public static void main(String[] args){
         Deque<Integer> queue = new ArrayDeque<>();
+        Deque<Integer> queue1 = new ArrayDeque<>();
         Deque<Integer> stack = new ArrayDeque<>();
         for(int i=0;i<100;i++){
             queue.offer(i);
-            stack.push(i);
+//            stack.push(i);
         }
         System.out.println(queue.peek());
-        System.out.println(stack.peek());
+        queue1 = queue;
+//        queue.clear();
+        System.out.println(queue1.peek());
+//        System.out.println(stack.peek());
     }
 }
