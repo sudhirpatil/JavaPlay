@@ -73,6 +73,5 @@ public class ListHelper {
                 filter(item -> item.contains("x")).
                 forEach(System.out::println);
 
-
     }
 }

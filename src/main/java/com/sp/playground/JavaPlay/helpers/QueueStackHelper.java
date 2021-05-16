@@ -8,9 +8,18 @@ public class QueueStackHelper {
         // Resizable array with add/delete from both sides of queue
         // ArrayDeque class is likely to be faster than Stack when used as a stack.
         // ArrayDeque class is likely to be faster than LinkedList when used as a queue.
-
         // Intializing an deque
         Deque<Integer> deque = new ArrayDeque<Integer>(10);
+        /** Stack **/
+        deque.push(1); // add at top/head of stack
+        deque.pop(); // remove from top/head of stack
+        deque.peek(); // check element at the top of stack
+
+        /** Queue **/
+        deque.offer(1); // add at the end/tail of the queue
+        deque.poll(); // remove from front/head of the queue
+        deque.peek(); // check element at the front/head of the queue
+
         // add() method to insert
         deque.add(10);
         deque.add(20);

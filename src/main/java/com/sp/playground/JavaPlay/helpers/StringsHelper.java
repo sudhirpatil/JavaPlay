@@ -32,6 +32,9 @@ public class StringsHelper {
         char[] chArray = str.toCharArray();
         // to char stream for chaining map etc
         str.chars().map(c -> c+1);
+
+        str.toCharArray();
+
     }
 
     public void charMethods(){

@@ -4,8 +4,10 @@ package com.sp.playground.JavaPlay.helpers;
 public class StringBuilderHelper {
     public static void main(String[] args){
         // create a StringBuilder object
-        // with a String pass as parameter
         StringBuilder sb = new StringBuilder();
+        // with a String pass as parameter
+        StringBuilder sbCopy = new StringBuilder("string"); // create string builder from string/string buffer
+
         sb.append("ABCDEF");
         // replaces all between start to end-1 with X
         sb.replace(2,3, "X");
@@ -18,9 +20,14 @@ public class StringBuilderHelper {
 
         // print string
         System.out.println("Reverse String = " + reverseStr.toString());
-
+        sb.charAt(0);
         // Append ', '(44) to the String
         sb.appendCodePoint(44);
+        sb.deleteCharAt(0);
+        sb.isEmpty();
+
+        sb.length();
+        sb.charAt(0);
 
         // Print the modified String
         System.out.println("Modified StringBuilder = "
