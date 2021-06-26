@@ -58,6 +58,9 @@ public class ArrayHelper {
 	public static void main(String[] args){
         boolean[] bool = new boolean[4];
 
+        // array of lists
+        List<Integer>[] list = new List[5];
+
         List<Integer> diffs = new ArrayList<>();
         diffs.add(11);
         diffs.set(0, 22);

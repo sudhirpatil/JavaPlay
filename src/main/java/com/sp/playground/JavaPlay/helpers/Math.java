@@ -17,7 +17,7 @@ public class Math {
         java.lang.Math.round(f); //Output is 9 : int
         java.lang.Math.ceil(f); //Output is 10 : double
         java.lang.Math.floor(f); //Output is 9 : double
-
+        java.lang.Math.abs(-1);
         int floorInt = (int) f; // Output is 9
     }
 }

@@ -7,6 +7,7 @@ public class StringsHelper {
         str.startsWith("xy");
         str.endsWith("abc");
 
+        str.length();
         //substring:: endIndex in exclusive i.e index 4 is not included but startIndex is included
         str.substring(0, 4);
         //substring starting from  index
@@ -34,7 +35,7 @@ public class StringsHelper {
         str.chars().map(c -> c+1);
 
         str.toCharArray();
-
+        str.length();
     }
 
     public void charMethods(){
@@ -42,6 +43,10 @@ public class StringsHelper {
         Character.getNumericValue('2');
     }
 
+    public static void main(String[] args) {
+        int i = 13, j=5;
+        System.out.println((int)(i/j));
+    }
     /* String Problem solving notes
 
 import org.junit.*;

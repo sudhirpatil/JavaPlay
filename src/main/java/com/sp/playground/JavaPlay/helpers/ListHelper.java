@@ -18,7 +18,10 @@ public class ListHelper {
         sList.forEach(item -> {
             System.out.println(item);
         });
-
+        // append to list
+        list.add(2);
+        // check if list is empty
+        list.isEmpty();
         // Collections methods
         Integer arr[] = {10, 20, 30, 40, 50};
         // Rotates elements of list, elements are moved like in circular list
