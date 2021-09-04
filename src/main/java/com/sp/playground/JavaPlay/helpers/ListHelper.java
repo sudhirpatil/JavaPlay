@@ -22,6 +22,14 @@ public class ListHelper {
         list.add(2);
         // check if list is empty
         list.isEmpty();
+
+        LinkedList<String> linkedList = new LinkedList<>();
+        // Whats the difference?
+        linkedList.removeFirst();
+        linkedList.pollFirst();
+        linkedList.poll();
+        linkedList.addFirst("1");
+
         // Collections methods
         Integer arr[] = {10, 20, 30, 40, 50};
         // Rotates elements of list, elements are moved like in circular list
@@ -56,8 +64,12 @@ public class ListHelper {
 
         // Sort
         sList.sort((a, b) -> a.compareTo(b));
-        sList.add(2, "test"); // add element at index 2 and shifts if any existing elements
-        sList.set(2, "replace"); // Replaces element at 2nd index, make sure element at 2 i already exists before set
+        // Appends item at the end of list
+        sList.add("append");
+        // add element at index 2 and shifts if any existing elements
+        sList.add(2, "test");
+        // Replaces element at index, make sure element at 2 already exists before set
+        sList.set(2, "replace");
         sList.addAll(Arrays.asList("four", "five"));
         sList.replaceAll(value -> value+"new");
         sList.removeAll(Arrays.asList("four", "five"));
