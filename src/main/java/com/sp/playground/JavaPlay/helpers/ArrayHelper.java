@@ -6,9 +6,9 @@ import java.util.stream.Collectors;
 public class ArrayHelper {
     public void arrayHelp(){
         // Instantiate array with specific length
-        int[] maxArr = new int[10];
+        int[] arrSimple = new int[10];
         // Fill array with 0's
-        Arrays.fill(maxArr, 0);
+        Arrays.fill(arrSimple, 0);
 
         // Convert array to List of Integer
         int[] intArr = {1, 2, 3, 4, 5, 6};
@@ -23,7 +23,7 @@ public class ArrayHelper {
                 .collect(Collectors.toList());
 
         // Sorting
-        Arrays.sort(maxArr); // Sorting array of primitive type
+        Arrays.sort(arrSimple); // Sorting array of primitive type
         // Sort multidimensional array, based on first element
         int[][] arr = {{6,4},{1,2},{4,5} };
         Arrays.sort(arr, (a, b) -> Integer.compare(a[0], b[0]));
@@ -41,10 +41,21 @@ public class ArrayHelper {
         // print nested string array
         String[][] nested = {{"row1col1", "row1col2"}, {"row2col1", "row2col2"}};
         Arrays.deepToString(nested);
-        // Convert Array to list, list is backed by array (not copy to list) so it is fixed size.
-        List<String> listStr = Arrays.asList(nested[0]);
-        // So all of the collections operation like max, min etc can be applied on array also
 
+
+        // Convert Array -> list, list is backed by array (not copy to list) so it is fixed size.
+        // Does not work on Primitives & works only on Objects like String Integer etc
+        Integer[] intArrObj = {1, 2, 3, 4, 5, 6};
+        List<Integer> listStr = Arrays.asList(intArrObj);
+
+        // Convert array -> List for primitives like int,double etc, no option other than using for loop
+        // Arrays.asList cannot be used for primitives, only objects are supported
+        List<Integer> intList1 = new ArrayList<>();
+        for(int i: intArr)
+            intList1.add(i);
+
+        // So all of the collections operation like max, min etc can be applied on array also
+        Collections.max(Arrays.asList(intArrObj));
         // Array rotation (circular) , replaces array elements in place
         Collections.rotate(Arrays.asList(intArr),  -2); // moves back [2] to [0]
         Collections.rotate(Arrays.asList(intArr),  2); // moves ahead [0] to [2] & [length-2] to [0]
@@ -53,6 +64,7 @@ public class ArrayHelper {
         int[] first = {1,2,3}, second = {6,7};
         int[] result = Arrays.copyOf(first, first.length + second.length);
         System.arraycopy(second, 0, result, first.length, second.length);
+
     }
 
 	public static void main(String[] args){

@@ -12,15 +12,18 @@ public class BitsetHelper {
         //how to set bit at specific index?
         bits1.set(2); //sets bit at 2nd index
         //How to get bit values at index?
-        bits1.get(2); // true/false
-        // Get next set bit, on after mentioned index
-        bits1.nextSetBit(0); // returns -1 no bit set after
-        //Loop to get or count bits
-        for(int i=bits1.nextSetBit(0);i>=0;i = bits1.nextSetBit(i+1)){}
-        // Get previous set index, on or previous to given index
-        bits1.previousSetBit(2); // return -1 if no bit is set previously
+        boolean bit = bits1.get(2); // true/false
+        // Returns the index of the first bit that is set to true that occurs on or after the specified starting index. If no such bit exists then -1 is returned.
+        int indexWith1 = bits1.nextSetBit(0); // returns -1 no bit set after
+        //Get count of 1 bits in a number
+        int bitCount = 0;
+        for(int i=bits1.nextSetBit(0);i>=0;i = bits1.nextSetBit(i+1)){
+            bitCount++;
+        }
         //Reverse loop to count bits
         for(int i = bits1.length();  (i = bits1.previousSetBit(i-1)) >= 0;){}
+        // Get previous index set as 1, on or previous to given index
+        indexWith1 = bits1.previousSetBit(2); // return -1 if no bit is set previously
 
         // set bits
         for(int i = 0; i < 16; i++) {
@@ -38,8 +41,15 @@ public class BitsetHelper {
         // XOR bits
         bits2.xor(bits1); //{}
 
-        // Uses long[] internally
-        // supports only keys with int
-        // Not good if you want to store only few values here and there
+        //Get bit representation of String
+        String binaryString = Integer.toBinaryString(5); //"101"
+        // Integer from bit representation of String
+        int value = Integer.parseUnsignedInt(binaryString, 2); //5
+        //int value with only highest-order ("leftmost") one-bit set
+        Integer.highestOneBit(15); //8
+        //int value with only lowest-order ("rightmost") one-bit set
+        Integer.lowestOneBit(14); //2
+        //count of number of bits with 1 in binary value
+        Integer.bitCount(14); //3
     }
 }

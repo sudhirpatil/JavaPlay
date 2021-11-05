@@ -19,7 +19,7 @@ public class MapHelper {
         //Iteration
         // Iterate, if needed to modify external variable
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + "/" + entry.getValue());
+            System.out.println(entry.getKey() + "-" + entry.getValue());
         }
         // Iterate functional way, but cannot modify variables defined outside
         map.

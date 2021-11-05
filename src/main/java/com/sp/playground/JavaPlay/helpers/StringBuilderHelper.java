@@ -24,7 +24,6 @@ public class StringBuilderHelper {
         // Append ', '(44) to the String
         sb.appendCodePoint(44);
         sb.deleteCharAt(0);
-        sb.isEmpty();
 
         sb.length();
         sb.charAt(0);
