@@ -64,6 +64,7 @@ public class ListHelper {
 
         // Sort
         sList.sort((a, b) -> a.compareTo(b));
+        Collections.sort(sList, (a, b) -> a.compareTo(b));
         // Appends item at the end of list
         sList.add("append");
         // add element at index 2 and shifts if any existing elements
