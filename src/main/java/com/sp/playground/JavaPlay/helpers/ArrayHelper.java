@@ -65,6 +65,17 @@ public class ArrayHelper {
         int[] result = Arrays.copyOf(first, first.length + second.length);
         System.arraycopy(second, 0, result, first.length, second.length);
 
+        //Compare 2 arrays
+        Arrays.equals(first, second);
+        //If array elements are objects or multi dimensional array
+        Object[] arr1 = {first}, arr2 = {second};
+        Arrays.deepEquals(arr1, arr2);
+
+        //Using arrays as key for Map or value for Set
+        //Can't use array directly since it works only if 2 objects are same & not the content of object
+        //So have to convert to List , which has better implementation for equals & hashcode
+        HashMap<List<String>, String> map = new HashMap<>();
+        map.put(Arrays.asList("first", "second"), "val");
     }
 
 	public static void main(String[] args){

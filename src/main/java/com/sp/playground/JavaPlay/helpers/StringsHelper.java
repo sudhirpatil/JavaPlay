@@ -36,6 +36,10 @@ public class StringsHelper {
 
         str.toCharArray();
         str.length();
+
+        "xx".toLowerCase();
+        "x u".split("[ !?',;.]");
+        "x".isEmpty();
     }
 
     public void charMethods(){

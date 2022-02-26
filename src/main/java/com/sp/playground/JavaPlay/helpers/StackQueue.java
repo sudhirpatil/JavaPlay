@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 
 public class StackQueue {
     public static void dequeStack(List<Integer> list){
+        // Stack
         Deque<Integer> stack = new ArrayDeque<>();
         stack.push(1);
         stack.pop();
@@ -37,6 +38,7 @@ public class StackQueue {
     }
 
     public static void dequeAsQueue(List<Integer> list){
+        // Queue
         Deque<String> queue = new ArrayDeque<>();
         // offer, poll, peek
         queue.offer("first");

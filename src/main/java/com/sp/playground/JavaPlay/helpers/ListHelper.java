@@ -48,8 +48,6 @@ public class ListHelper {
                 return o1.compareToIgnoreCase(o2);
             }
         });
-        // Sort
-        Collections.sort(sList);
 
         //List Object methods
         //Check if empty
@@ -89,5 +87,10 @@ public class ListHelper {
                 filter(item -> item.contains("x")).
                 forEach(System.out::println);
 
+    }
+
+    public static void main(String[] args) {
+        List<Integer> list = Arrays.asList(8,1,3);
+        Collections.sort(list);
     }
 }

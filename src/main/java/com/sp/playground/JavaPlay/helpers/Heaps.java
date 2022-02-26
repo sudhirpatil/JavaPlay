@@ -12,6 +12,7 @@ public class Heaps {
                     to find min - k elements
         default priority queue is min heap
          */
+        // Min Heap
         PriorityQueue<String> minHeap = new PriorityQueue<>();
         // same methods as queue , as it's a type of queue
         minHeap.add("12345"); // add element priority Queue
