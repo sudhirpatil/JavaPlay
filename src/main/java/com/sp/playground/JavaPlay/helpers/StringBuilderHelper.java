@@ -20,21 +20,21 @@ public class StringBuilderHelper {
 
         // print string
         System.out.println("Reverse String = " + reverseStr.toString());
+        // Char at Index
         sb.charAt(0);
-        // Append ', '(44) to the String
-        sb.appendCodePoint(44);
+        // Delete char at index
         sb.deleteCharAt(0);
-
+        // Append char using ascii code value 44 (i.e ,) to the String
+        sb.appendCodePoint(44);
+        // Length
         sb.length();
-        sb.charAt(0);
 
         // Print the modified String
         System.out.println("Modified StringBuilder = "
                 + sb);
 
         // get capacity
-        int capacity = sb.capacity();
-
+        int capacity = sb.capacity(); // Max char that can be saved beyond it will go out of memory
         // print the result
         System.out.println("StringBuilder = " + sb);
         System.out.println("Capacity of StringBuilder = "

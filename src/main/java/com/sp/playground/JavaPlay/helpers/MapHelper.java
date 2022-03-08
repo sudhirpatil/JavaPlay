@@ -26,17 +26,19 @@ public class MapHelper {
                 forEach((key, value) -> System.out.println(key + " " + value));
         map.entrySet().
                 forEach(entry -> System.out.println(entry.getKey() + " " + entry.getValue()));
-        // get Collection<> with .values
+        // get all values
         for(int value: map.values()){
             System.out.println("Value: "+value);
         }
 
-        // get Set<> of keys with .keySet
+        // Get all Keys
         for(String key: map.keySet()){
             System.out.println("Key: "+key);
         }
 
+        // Check if contains keyy
         map.containsKey("Larry");
+        // Get value for key , return default value if doesn't exis
         map.getOrDefault("key1", 0);
         // Add key with default value if not exists, if exists increment value
         // This will not work when Map value is collection, as .add/.put won't return Collection
@@ -110,7 +112,6 @@ public class MapHelper {
     }
 
     public static void main(String[] args) {
-
         // TreeMap :: for sorted map by keys
         //we have to define object as TreeMap to use NavigableMap functions
         TreeMap<Integer,String> map = new TreeMap<>();
@@ -147,8 +148,6 @@ public class MapHelper {
         System.out.println("Closest lower/floor entry than 5 is "+entry);
         entry = map.ceilingEntry(4);
         System.out.println("Closest higher/ceiling key than 4 is "+entry);
-
-
     }
 
     static void setHelper(){

@@ -63,6 +63,7 @@ public class DatatypeConversion {
         }
     }
 
+    // Check if String is integer without using Integer.parseInt
     public static boolean isIntegerOptimal(String str) {
         if (str == null) {
             return false;

@@ -5,8 +5,10 @@ public class StringsHelper {
         String str = "xyzabc";
         // check if it starts with xy
         str.startsWith("xy");
+        // check if it ends with xy
         str.endsWith("abc");
 
+        //Size of string
         str.length();
         //substring:: endIndex in exclusive i.e index 4 is not included but startIndex is included
         str.substring(0, 4);
@@ -22,8 +24,10 @@ public class StringsHelper {
         str.indexOf("abc", 2);
         str.lastIndexOf("b");
 
-        // Returns boolean, returns false if string in null
-        str.equals("xyx");
+        // Check if 2 strings equal
+        str.equals("xyx"); // Returns boolean, returns false if string in null
+
+        // Compare 2 strings
         // return diff value 0 if equal, >0 if lexically ahead, <0 if lexically behind
         // exception if string is null
         // bit costly as it go through each of the character comparisons
@@ -34,16 +38,22 @@ public class StringsHelper {
         // to char stream for chaining map etc
         str.chars().map(c -> c+1);
 
-        str.toCharArray();
-        str.length();
-
+        // To lower case
         "xx".toLowerCase();
-        "x u".split("[ !?',;.]");
-        "x".isEmpty();
+        // To upper case
+        str.toUpperCase();
+
+        //Split string
+        str.split("[ !?',;.]");
+
+        // Check if string is empty
+        str.isEmpty();
     }
 
     public void charMethods(){
-        Character.isLetterOrDigit('0');  // To detect number characters
+        //Check if character is letter or digit
+        Character.isLetterOrDigit('0');
+        //Convert character to number/int
         Character.getNumericValue('2');
     }
 
