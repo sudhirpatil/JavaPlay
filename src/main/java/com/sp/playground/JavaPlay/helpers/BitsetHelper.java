@@ -41,6 +41,9 @@ public class BitsetHelper {
         // XOR bits
         bits2.xor(bits1); //{}
 
+        //convert Int to bitset
+        BitSet.valueOf(new long[]{2});
+
         //Get bit representation of String
         String binaryString = Integer.toBinaryString(5); //"101"
         // Integer from bit representation of String
@@ -52,4 +55,34 @@ public class BitsetHelper {
         //count of number of bits with 1 in binary value
         Integer.bitCount(14); //3
     }
+
+    public void binaryStringOfSameLength(int[] nums) {
+        // Converting all numbers to 0 prefixed binary strings, to make all of numbers equal length
+        // Compute length L of max number in a binary representation
+        int maxNum = nums[0];
+        for (int num : nums) maxNum = Math.max(maxNum, num);
+        int bitLen = (Integer.toBinaryString(maxNum)).length();
+
+        // zero left-padding to ensure L bits for each number
+        int n = nums.length;
+        int bitmask = 1 << bitLen; // Creates mask with extra one bit length more on left, if L=2 to 100
+        String[] strNums = new String[n];
+        for (int i = 0; i < n; ++i) {
+            strNums[i] = Integer.toBinaryString(bitmask | nums[i]).substring(1);
+        }
+    }
+
+    public static BitSet convertLongToBitset(long value) {
+        BitSet bits = new BitSet();
+        int index = 0;
+        while (value != 0L) {
+            if (value % 2L != 0) {
+                bits.set(index);
+            }
+            ++index;
+            value = value >>> 1;
+        }
+        return bits;
+    }
+
 }

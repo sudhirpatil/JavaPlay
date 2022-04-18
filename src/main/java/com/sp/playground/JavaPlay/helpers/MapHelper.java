@@ -27,6 +27,11 @@ public class MapHelper {
         map.entrySet().
                 forEach(entry -> System.out.println(entry.getKey() + " " + entry.getValue()));
         // get all values
+        Collection<Integer> collection = map.values(); // Returns Collection type
+        // Get list of all values
+        List<Integer> list = new ArrayList<>(map.values());
+        // Get all keys
+        Set<String> keySet = map.keySet(); // Returns Set type
         for(int value: map.values()){
             System.out.println("Value: "+value);
         }
@@ -64,8 +69,8 @@ public class MapHelper {
         mapList.putIfAbsent("test2", new ArrayList<>());
         mapList.get("test2").add(1);
         // OR
-        List<Integer> list = mapList.getOrDefault("test1", new ArrayList<>());
-        list.add(1);
+        List<Integer> listVal = mapList.getOrDefault("test1", new ArrayList<>());
+        listVal.add(1);
 
         // To remove item from map while looping, using iterator and not for loops
         Iterator<Map.Entry<String, Integer>> it = map.entrySet().iterator();
@@ -111,7 +116,7 @@ public class MapHelper {
         }
     }
 
-    public static void main(String[] args) {
+    public void treeMap(){
         // TreeMap :: for sorted map by keys
         //we have to define object as TreeMap to use NavigableMap functions
         TreeMap<Integer,String> map = new TreeMap<>();
@@ -136,18 +141,23 @@ public class MapHelper {
         subMap = map.headMap(5, true);
         subMap = map.tailMap(5, true);
 
-        //Find entry objects strictly lower, higher with given key
-        map.lowerEntry(5);
-        System.out.println("Closest Lower key than 5 is "+entry);
-        entry = map.higherEntry(5);
-        System.out.println("Closest Higher key than 5 is "+entry);
-        // Find Keys higher/lower than given key in map
-        System.out.println("Closest Lower key than 4 is "+map.lowerKey(4));
-        // Closest lower or equal key in the map
+        //Find entry objects lower, higher with given key
+        // lower than current ( floor == lower side/down , floor or lower than floor)
+        // Returns a key-value mapping associated with the greatest key less than or equal to the given key
         entry = map.floorEntry(5);
-        System.out.println("Closest lower/floor entry than 5 is "+entry);
+        // higher than current ( ceil == higher side/up, ceil or higher)
+        // Returns a key-value mapping associated with the least key greater than or equal to the given key
         entry = map.ceilingEntry(4);
-        System.out.println("Closest higher/ceiling key than 4 is "+entry);
+        // Return Entry with Greatest key strictly less than the given key 5
+        map.lowerEntry(5);
+        // Return Entry with least key strictly greater than the given key 5
+        entry = map.higherEntry(5);
+
+        // Returns the greatest key strictly less than the given key
+        map.lowerKey(4);
+    }
+
+    public static void main(String[] args) {
     }
 
     static void setHelper(){

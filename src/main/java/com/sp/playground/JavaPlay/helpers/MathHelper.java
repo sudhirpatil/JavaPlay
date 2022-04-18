@@ -1,6 +1,6 @@
 package com.sp.playground.JavaPlay.helpers;
 
-public class Math {
+public class MathHelper {
     public void permeutationCombination(){
 
         // Total Combination, when order is required : different ways to select 3 chocolates of different color

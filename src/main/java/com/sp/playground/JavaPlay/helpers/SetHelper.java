@@ -6,6 +6,10 @@ public class SetHelper {
 
     public void mapHelp(){
         /************************* Sets *************************************/
+        /*
+        Set is List that maintains uniqueness & fast way to check if contains an element, it's not like map
+        Uses Hashset to check .contains & to avoid duplicates, so complexity is O(N)
+         */
         Set<Integer> set = new HashSet<>(Arrays.asList(1, 2));
         Set<Integer> newSet = new HashSet<Integer>(set);
         set.add(1);
@@ -23,8 +27,23 @@ public class SetHelper {
         // Linked HashSet to maintain the insertion order
         Set<String> lh = new LinkedHashSet<String>();
 
+        //modification of set using iterator
+        Iterator<Integer> setIter = set.iterator();
+        while(setIter.hasNext()){
+            int x = (int) setIter.next();
+            if(x%2 ==0) setIter.remove();
+        }
+
+        // print each element
+        set.stream().forEach(System.out::println);
+
+        //Declare & initialize array of sets, note no <datatype> on right side
+        Set<Integer>[] map = new HashSet[10];
+    }
+
+    public void treeSetHelper(){
         // TreeSet to iterate elements in ascending order. descendingIterator can be used to iterate in descending order
-        TreeSet<Integer> treeSet = new TreeSet<>(set);
+        TreeSet<Integer> treeSet = new TreeSet<>(Arrays.asList(1, 2));
         // set with all the elements smaller
         treeSet.headSet(1, true);
         // Set with all the elements greater
@@ -38,13 +57,11 @@ public class SetHelper {
         // remove first & last element like stack/queue
         treeSet.pollFirst();
         treeSet.pollLast();
-        //modification of set using iterator
-        Iterator<Integer> setIter = set.iterator();
-        while(setIter.hasNext()){
-            int x = (int) setIter.next();
-            if(x%2 ==0) setIter.remove();
-        }
-        // print each element
-        set.stream().forEach(System.out::println);
+
+        //get lower or equal value
+        treeSet.floor(2);
+        // get higher or equal value
+        treeSet.ceiling(2);
+
     }
 }
