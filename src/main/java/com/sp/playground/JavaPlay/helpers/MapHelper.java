@@ -127,7 +127,24 @@ public class MapHelper {
 
         // Lowest & Highest entry
         Map.Entry<Integer,String> entry = map.firstEntry();
+        map.firstEntry();
         entry = map.lastEntry();
+
+        //Find entry objects lower, higher with given key
+        // lower than current ( floor == lower side/down , floor or lower than floor)
+        // Returns a key-value mapping associated with the greatest key less than or equal to the given key
+        entry = map.floorEntry(5);
+        // higher than current ( ceil == higher side/up, ceil or higher)
+        // Returns a key-value mapping associated with the least key greater than or equal to the given key
+        entry = map.ceilingEntry(4);
+        // Return key largest strictly lesser than current number,
+        // note even if key exists in map it will return next lower key that's the difference compared to floorEntry
+        map.lowerEntry(5);
+        // Return smallest strictly higher key
+        // Note even if key is map will returns next higher key, that's differnce with ceilingEntry
+        entry = map.higherEntry(5);
+        // Returns the greatest key strictly less than the given key
+        map.lowerKey(4);
 
         //poll and remove first, last entries
         entry = map.pollFirstEntry();
@@ -141,20 +158,7 @@ public class MapHelper {
         subMap = map.headMap(5, true);
         subMap = map.tailMap(5, true);
 
-        //Find entry objects lower, higher with given key
-        // lower than current ( floor == lower side/down , floor or lower than floor)
-        // Returns a key-value mapping associated with the greatest key less than or equal to the given key
-        entry = map.floorEntry(5);
-        // higher than current ( ceil == higher side/up, ceil or higher)
-        // Returns a key-value mapping associated with the least key greater than or equal to the given key
-        entry = map.ceilingEntry(4);
-        // Return Entry with Greatest key strictly less than the given key 5
-        map.lowerEntry(5);
-        // Return Entry with least key strictly greater than the given key 5
-        entry = map.higherEntry(5);
 
-        // Returns the greatest key strictly less than the given key
-        map.lowerKey(4);
     }
 
     public static void main(String[] args) {

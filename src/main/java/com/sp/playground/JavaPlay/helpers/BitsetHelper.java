@@ -11,6 +11,10 @@ public class BitsetHelper {
 
         //how to set bit at specific index?
         bits1.set(2); //sets bit at 2nd index
+        bits1.set(2, true);
+        //how to unset or set false value at index?
+        bits1.clear(2);
+        bits1.clear(); // clears or sets false to whole bitset
         //How to get bit values at index?
         boolean bit = bits1.get(2); // true/false
         // Returns the index of the first bit that is set to true that occurs on or after the specified starting index. If no such bit exists then -1 is returned.
@@ -24,6 +28,7 @@ public class BitsetHelper {
         for(int i = bits1.length();  (i = bits1.previousSetBit(i-1)) >= 0;){}
         // Get previous index set as 1, on or previous to given index
         indexWith1 = bits1.previousSetBit(2); // return -1 if no bit is set previously
+
 
         // set bits
         for(int i = 0; i < 16; i++) {
@@ -41,8 +46,12 @@ public class BitsetHelper {
         // XOR bits
         bits2.xor(bits1); //{}
 
-        //convert Int to bitset
+        //convert Int/long to bitset
         BitSet.valueOf(new long[]{2});
+        // bitset to long
+        long val = bits1.toLongArray()[0];
+        // bitset to String e.g  "{2, 4, 10}"
+        String str = bits1.toString();
 
         //Get bit representation of String
         String binaryString = Integer.toBinaryString(5); //"101"

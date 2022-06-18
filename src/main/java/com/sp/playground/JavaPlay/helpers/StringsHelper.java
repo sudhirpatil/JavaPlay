@@ -26,6 +26,8 @@ public class StringsHelper {
 
         // Check if 2 strings equal
         str.equals("xyx"); // Returns boolean, returns false if string in null
+        // Check if string is empty
+        str.isEmpty();
 
         // Compare 2 strings
         // return diff value 0 if equal, >0 if lexically ahead, <0 if lexically behind
@@ -46,8 +48,6 @@ public class StringsHelper {
         //Split string
         str.split("[ !?',;.]");
 
-        // Check if string is empty
-        str.isEmpty();
     }
 
     public void charMethods(){

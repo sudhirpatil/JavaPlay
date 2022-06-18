@@ -77,15 +77,31 @@ public class ArrayHelper {
     }
 
 	public static void main(String[] args){
-        boolean[] bool = new boolean[4];
+//        boolean[] bool = new boolean[4];
+//
+//        // array of lists
+//        List<Integer>[] list = new List[5];
+//
+//        List<Integer> diffs = new ArrayList<>();
+//        diffs.add(11);
+//        diffs.set(0, 22);
+//        System.out.println(diffs.get(0));
 
-        // array of lists
-        List<Integer>[] list = new List[5];
+        // int (primitive not object) array cannot be coverted to array using Arrays.asList()
+        int[] arr = {1,2,3,4};
+        int[] a1 = new int[4];
+        a1 = arr;
+        Arrays.fill(a1, 0);
+        System.out.println(Arrays.toString(arr)+"#"+Arrays.toString(a1));
+        // Arrays.asList(arr) Doesn't work
 
-        List<Integer> diffs = new ArrayList<>();
-        diffs.add(11);
-        diffs.set(0, 22);
-        System.out.println(diffs.get(0));
+        // int Values directly passed in to Array.asList(1,2) works , but not array constructed earlier
+        List<Integer> xx = Arrays.asList(1, 2, 3);
+
+        //Arrays.toList works only on Objects not primitives (unless values directly passed as param like above)
+        Integer[] arrObj = new Integer[] {1, 2, 3};
+        List<Integer> yx = Arrays.asList(arrObj);
+
 //        Set<Integer> intList = new HashSet<>();
 //        intList.add(10);
 //        intList.add(20);

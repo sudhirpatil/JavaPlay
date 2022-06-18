@@ -15,7 +15,7 @@ public class StringBuilderHelper {
         System.out.println("String = " + sb.toString());
         //inserts at specific offset &  shifts chars next it
         sb.insert(1, 'x');
-        // reverse the string
+        // reverse the characters in place & returns reference for this object
         StringBuilder reverseStr = sb.reverse();
 
         // print string

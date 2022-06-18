@@ -22,17 +22,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e19a696-2502-442e-91f7-63cf96dcb508" name="Default Changelist" comment="few more notes on array , heap etc">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="5e19a696-2502-442e-91f7-63cf96dcb508" name="Default Changelist" comment="Few more docs">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/RandomNumberHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/threads/PingPongThreadUsingReentrantLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/threads/PingPongThreadUsingSynchronizedObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/ArrayHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/ArrayHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/DatatypeConversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/DatatypeConversion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/ListHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/ListHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/BitsetHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/BitsetHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/MapHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/MapHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/QueueStackHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/QueueStackHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/MathHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/MathHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/StringBuilderHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/StringBuilderHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/StringsHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/StringsHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/tree/TrieNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sp/playground/JavaPlay/helpers/tree/TrieNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +81,7 @@
       <recent name="com.sp.playground.JavaPlay.helpers.graph" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BitsetHelper">
+  <component name="RunManager" selected="Application.ArrayHelper">
     <configuration name="ArrayHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sp.playground.JavaPlay.helpers.ArrayHelper" />
       <module name="JavaPlay" />
@@ -120,8 +121,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StackQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sp.playground.JavaPlay.helpers.StackQueue" />
+    <configuration name="MathHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sp.playground.JavaPlay.helpers.MathHelper" />
       <module name="JavaPlay" />
       <extension name="coverage">
         <pattern>
@@ -148,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ArrayHelper" />
+        <item itemvalue="Application.MathHelper" />
         <item itemvalue="Application.BitsetHelper" />
         <item itemvalue="Application.StringsHelper" />
         <item itemvalue="Application.BeautifulArrangement" />
-        <item itemvalue="Application.ArrayHelper" />
-        <item itemvalue="Application.StackQueue" />
       </list>
     </recent_temporary>
   </component>
@@ -235,7 +236,21 @@
       <option name="project" value="LOCAL" />
       <updated>1645857401310</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="few more notes on array , heap etc">
+      <created>1646747179545</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1646747179545</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Few more docs">
+      <created>1650243098236</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1650243098236</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,6 +274,7 @@
     <MESSAGE value="List changes" />
     <MESSAGE value="Graph basics" />
     <MESSAGE value="few more notes on array , heap etc" />
-    <option name="LAST_COMMIT_MESSAGE" value="few more notes on array , heap etc" />
+    <MESSAGE value="Few more docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Few more docs" />
   </component>
 </project>
